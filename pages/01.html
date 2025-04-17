@@ -1,0 +1,35 @@
+<!-- pages/01.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài viết 1</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h1 id="article-title">Tiêu đề bài viết</h1>
+    <div id="article-content"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Load Header và Footer -->
+  <script src="../js/script.js"></script>
+
+  <!-- Load nội dung Markdown -->
+  <script type="module">
+    import { loadMarkdown } from '../modules/mdloader.js';
+
+    // Đường dẫn đến file Markdown và ID của phần tử DOM để hiển thị nội dung
+    const markdownFilePath = '../pages/contents/01.md';
+    const targetElementId = 'article-content';
+
+    // Gọi hàm loadMarkdown để xử lý
+    loadMarkdown(markdownFilePath, targetElementId);
+  </script>
+</body>
+</html>
