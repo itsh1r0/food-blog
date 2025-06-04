@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiêu đề bài viết 1 - Mamcom3mien</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style_post.css">
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-include"></div>
+    <!-- Nội dung bài viết -->
+    <main class="post-main">
+        <h1 class="post-title">Tiêu đề chính</h1>
+        <div class="post-meta">Ngày tháng năm / Tác giả</div>
+        <div class="post-content">
+            <div class="post-section">
+                <div class="post-img-block">
+                    <img src="../post-img1.jpg" alt="Ảnh 1">
+                </div>
+                <div class="post-paragraphs">
+                    <p class="post-paragraph">Đây là đoạn giới thiệu hoặc mở đầu cho phần này của bài viết. Bạn có thể trình bày nội dung thực tế ở đây.</p>
+                    <p class="post-paragraph">Tiếp tục với các ý chính, chia sẻ kinh nghiệm, công thức, hoặc câu chuyện liên quan đến chủ đề.</p>
+                    <p class="post-paragraph">Bạn có thể thêm nhiều đoạn văn tùy ý, mỗi đoạn là một thẻ &lt;p&gt;.</p>
+                </div>
+            </div>
+            <div class="post-section">
+                <div class="post-img-block">
+                    <img src="../banner/banner1.jpg" alt="Ảnh 2">
+                </div>
+                <div class="post-paragraphs">
+                    <p class="post-paragraph">Đây là đoạn văn tiếp theo cho phần mới, có thể là hướng dẫn, cảm nhận hoặc thông tin bổ sung.</p>
+                    <p class="post-paragraph">Hãy trình bày nội dung thật tự nhiên, dễ đọc và chia thành nhiều đoạn nhỏ nếu cần.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-include"></div>
+    <script src="../script.js"></script>
+    <script>
+        // Nhúng header và footer
+        (async () => {
+            document.getElementById('header-include').innerHTML = await (await fetch('../header.html')).text();
+            document.getElementById('footer-include').innerHTML = await (await fetch('../footer.html')).text();
+        })();
+    </script>
+</body>
+</html>

@@ -1,16 +1,120 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Mamcom3mien</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
-  <main>
-    <h1>Chào mừng đến với trang chủ!</h1>
-    <p>Đây là nơi bạn có thể tìm thấy mọi thứ bạn cần.</p>
-    <a href="articles.html">Xem danh sách bài viết</a>
-  </main>
+    <!-- Header -->
+    <div id="header-include"></div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="banner/banner1.jpg" alt="Banner 1">
+            </div>
+            <div class="slide">
+                <img src="banner/banner2.jpg" alt="Banner 2">
+            </div>
+            <div class="slide">
+                <img src="banner/banner3.jpg" alt="Banner 3">
+            </div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="hero-info">
+            <h1>Mamcom3mien Blog</h1>
+            <p>Chia sẻ công thức, trải nghiệm và văn hóa ẩm thực ba miền Việt Nam.</p>
+        </div>
+    </section>
+
+    <!-- Blog nổi bật -->
+    <section id="blog">
+        <div class="container">
+            <h2>BLOG NỔI BẬT</h2>
+            <div class="blog-posts">
+                <div class="post">
+                    <img src="post1.jpg" alt="Post 1">
+                    <h3>Tiêu đề bài viết 1</h3>
+                    <p>Giới thiệu ngắn gọn về bài viết...</p>
+                </div>
+                <div class="post">
+                    <img src="post2.jpg" alt="Post 2">
+                    <h3>Tiêu đề bài viết 2</h3>
+                    <p>Giới thiệu ngắn gọn về bài viết...</p>
+                </div>
+                <div class="post">
+                    <img src="post3.jpg" alt="Post 3">
+                    <h3>Tiêu đề bài viết 3</h3>
+                    <p>Giới thiệu ngắn gọn về bài viết...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section tiếp theo -->
+    <section id="next-section">
+        <div class="container">
+            <div class="content">
+                <h2>Thông tin thêm</h2>
+                <p>Đây là phần thông tin bổ sung...</p>
+                <button>Xem chi tiết</button>
+            </div>
+            <div class="image-carousel">
+                <div class="slide active">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-include"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Nhúng header và footer dạng module
+        (async () => {
+            document.getElementById('header-include').innerHTML = await (await fetch('header.html')).text();
+            document.getElementById('footer-include').innerHTML = await (await fetch('footer.html')).text();
+
+            // Sau khi header đã được nhúng, gắn lại sự kiện cho nút user
+            const userBtn = document.querySelector('.fa-user-circle')?.parentElement;
+            const popup = document.getElementById('login-popup');
+            const closeBtn = document.getElementById('close-login-popup');
+            const cancelBtn = popup?.querySelector('button:last-child');
+            if (userBtn && popup && closeBtn && cancelBtn) {
+                userBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    popup.style.display = 'flex';
+                });
+                closeBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+                cancelBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
