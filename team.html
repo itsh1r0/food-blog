@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mamcom3mien</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <style>
+        .image-carousel {
+            max-width: 420px;
+            height: 260px;
+            margin: 0 auto 48px auto !important;
+        }
+        .image-carousel .slide,
+        .image-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-include"></div>
+
+    <main style="background: #a2a9b8; min-height: 100vh;">
+        <section style="padding: 64px 0 32px 0;">
+            <h1 style="text-align:center; font-size:4rem; font-weight:900; margin-bottom:48px;">About Us</h1>
+            <div style="max-width:90vw; margin:0 auto 40px auto;">
+                <p style="font-size:1.2rem; color:#333; margin-bottom:16px;">
+                    Mamcom3mien là blog chia sẻ công thức, trải nghiệm và văn hóa ẩm thực ba miền Việt Nam.
+                </p>
+                <p style="font-size:1.2rem; color:#333; margin-bottom:16px;">
+                    Chúng tôi là những người trẻ đam mê nấu ăn, mong muốn lan tỏa giá trị ẩm thực truyền thống.
+                </p>
+                <p style="font-size:1.2rem; color:#333; margin-bottom:16px;">
+                    Tại đây, bạn sẽ tìm thấy các món ngon, bí quyết bếp núc và câu chuyện thú vị về ẩm thực Việt.
+                </p>
+                <p style="font-size:1.2rem; color:#333; margin-bottom:16px;">
+                    Cùng đồng hành với Mamcom3mien để khám phá và lưu giữ hương vị quê hương!
+                </p>
+                <p style="font-size:1.2rem; color:#333;">
+                    Cảm ơn bạn đã ghé thăm blog của chúng tôi!
+                </p>
+            </div>
+
+            <!-- Team Carousel -->
+            <div class="carousel" id="team-carousel" style="margin: 0 auto 48px auto;">
+                <div class="slide active">
+                    <img src="./banner/banner1.jpg" alt="Nguyễn Văn A - Food Blogger">
+                </div>
+                <div class="slide">
+                    <img src="./banner/banner2.jpg" alt="Trần Thị B - Photographer">
+                </div>
+                <div class="slide">
+                    <img src="./banner/banner3.jpg" alt="Lê Văn C - Web Developer">
+                </div>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div style="max-width:90vw; margin:0 auto 40px auto;">
+                <h2 style="width:230px; height:22px; background:none; color:#222; font-size:1.5rem; font-weight:bold; margin-bottom:18px;">
+                    Thành viên team
+                </h2>
+                <p style="height:auto; background:none; color:#444; margin-bottom:10px;">
+                    - Nguyễn Văn A: Food Blogger, Recipe Creator
+                </p>
+                <p style="height:auto; background:none; color:#444; margin-bottom:10px;">
+                    - Trần Thị B: Photographer, Content Editor
+                </p>
+                <p style="height:auto; background:none; color:#444; margin-bottom:10px;">
+                    - Lê Văn C: Web Developer, Designer
+                </p>
+                <p style="height:auto; background:none; color:#444; margin-bottom:10px;">
+                    - Phạm Thị D: Social Media, Marketing
+                </p>
+                <p style="height:auto; background:none; color:#444;">
+                    ...và các cộng tác viên khác!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-include"></div>
+
+    <script src="./script.js"></script>
+    <script>
+        // Nhúng header và footer
+        (async () => {
+            document.getElementById('header-include').innerHTML = await (await fetch('header.html')).text();
+            document.getElementById('footer-include').innerHTML = await (await fetch('footer.html')).text();
+        })();
+
+        // Carousel cho team (giống index)
+        const teamCarousel = document.querySelector('#team-carousel');
+        if (teamCarousel) {
+            const teamSlides = teamCarousel.querySelectorAll('.slide');
+            const teamDots = teamCarousel.querySelectorAll('.dot');
+            let teamCurrentSlide = 0;
+            let teamInterval;
+
+            function showTeamSlide(index) {
+                teamSlides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                teamDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+                teamCurrentSlide = index;
+                resetTeamInterval();
+            }
+
+            function resetTeamInterval() {
+                clearInterval(teamInterval);
+                teamInterval = setInterval(() => {
+                    let next = (teamCurrentSlide + 1) % teamSlides.length;
+                    showTeamSlide(next);
+                }, 5000);
+            }
+
+            teamDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showTeamSlide(index);
+                });
+            });
+
+            resetTeamInterval();
+        }
+    </script>
+</body>
+</html>
