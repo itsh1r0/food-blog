@@ -66,11 +66,14 @@
     <div id="footer-include"></div>
 
     <script src="./script.js"></script>
+    <script src="./login-popup.js"></script>
     <script>
         // Nhúng header và footer
         (async () => {
             document.getElementById('header-include').innerHTML = await (await fetch('header.html')).text();
             document.getElementById('footer-include').innerHTML = await (await fetch('footer.html')).text();
+            // Gắn lại sự kiện popup login sau khi header đã được nhúng
+            attachLoginPopupEvents();
         })();
     </script>
 </body>
