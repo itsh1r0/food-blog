@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tất cả bài viết - Mamcom3mien</title>
+<link href="../../styles.css" rel="stylesheet"/>
+<link href="./icon.png" rel="icon" type="image/png"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Thêm style riêng cho trang blogs */
+        .blog-posts a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .blog-posts a:hover {
+            text-decoration: none;
+        }
+        .blog-posts .post h3,
+        .blog-posts .post p {
+            text-decoration: none !important;
+        }
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+        .blog-list a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .blog-list a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+        .blog-row {
+            display: flex;
+            gap: 32px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            padding: 32px 24px;
+            align-items: flex-start;
+        }
+        .blog-thumb {
+            flex: 0 0 340px;
+            max-width: 340px;
+        }
+        .blog-thumb img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #666;
+        }
+        .blog-info {
+            flex: 1 1 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .blog-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #222;
+        }
+        .blog-info p {
+            color: #444;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        .blog-info a {
+            color: #ff6b00;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 8px;
+            display: inline-block;
+            transition: background 0.2s, color 0.2s;
+            border-radius: 6px;
+            padding: 6px 16px;
+        }
+        .blog-info a:hover {
+            background: #ff6b00;
+            color: #fff;
+        }
+        .section-spacing {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        @media (max-width: 900px) {
+            .blog-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .blog-thumb {
+                max-width: 100%;
+            }
+            .blog-thumb img {
+                height: 180px;
+            }
+        }
+        .post, .blog-row {
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .post:hover, .blog-row:hover {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+            transform: translateY(-4px) scale(1.02);
+            z-index: 1;
+        }
+        .post img {
+            border-radius: 10px;
+        }
+        .post {
+            border-radius: 12px;
+            background: #fff;
+            padding: 18px 12px;
+        }
+        #blog-featured.section-spacing {
+            margin-bottom: 40px;
+        }
+        @media (max-width: 600px) {
+            .blog-row, .post {
+                padding: 12px 4px;
+            }
+            .blog-info h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<div id="header-include"></div>
+<!-- Blog nổi bật -->
+<section class="section-spacing" id="blog-featured">
+<div class="container" style="display:flex;flex-direction:column;align-items:center; font-size:1.7rem">
+<h1>ẨM THỰC MIỀN NAM</h1>
+</div>
+</section>
+<main style="min-height: 70vh;">
+<section id="blog">
+<div class="container" style="flex-direction: column; align-items: flex-start;">
+<div class="blog-list">
+<a href="./blogs/cat4/post1.html">
+<div class="blog-row">
+<div class="blog-thumb">
+<img alt="Hủ Tiếu – Hương Vị Đậm Đà Của Miền Nam Trên Từng Sợi Nhớ Thương" src="./assets/01.png"/>
+</div>
+<div class="blog-info">
+<h3>Hủ Tiếu – Hương Vị Đậm Đà Của Miền Nam Trên Từng Sợi Nhớ Thương</h3>
+<p>Trong bản đồ ẩm thực phong phú của Việt Nam, nếu phở được xem là linh hồn của miền Bắc, bún bò là niềm tự hào của miền Trung, thì hủ tiếu ch...</p>
+</div>
+</div>
+</a>
+
+<a href="./blogs/cat4/post2.html">
+<div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bún Bò Huế Miền Nam – Hương Vị Miền Trung, Tâm Hồn Miền Nam" src="./assets/05.png"/>
+</div>
+<div class="blog-info">
+<h3>Bún Bò Huế Miền Nam – Hương Vị Miền Trung, Tâm Hồn Miền Nam</h3>
+<p>Khi nhắc đến ẩm thực miền Nam, người ta thường nghĩ đến vị ngọt thanh, béo ngậy và sự phóng khoáng trong cách nêm nếm, chế biến. Điều này th...</p>
+</div>
+</div>
+</a>
+
+<a href="./blogs/cat4/post3.html">
+<div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bánh Xèo Miền Tây – Món Ngon Vàng Ruộm Giữa Vùng Sông Nước" src="./assets/07.png"/>
+</div>
+<div class="blog-info">
+<h3>Bánh Xèo Miền Tây – Món Ngon Vàng Ruộm Giữa Vùng Sông Nước</h3>
+<p>Nếu hỏi đâu là món ăn “đặc sản tâm hồn” của người miền Tây, chắc hẳn nhiều người sẽ nhắc ngay đến bánh xèo. Món bánh đơn sơ với vỏ mỏng giòn...</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<div id="footer-include"></div>
+<script>
+        // Nhúng header và footer dạng module
+        (async () => {
+            document.getElementById('header-include').innerHTML = await (await fetch('../../header.html')).text();
+            document.getElementById('footer-include').innerHTML = await (await fetch('../../footer.html')).text();
+
+            // Sau khi header đã được nhúng, gắn lại sự kiện cho nút user
+            const userBtn = document.querySelector('.fa-user-circle')?.parentElement;
+            const popup = document.getElementById('login-popup');
+            const closeBtn = document.getElementById('close-login-popup');
+            const cancelBtn = popup?.querySelector('button:last-child');
+            if (userBtn && popup && closeBtn && cancelBtn) {
+                userBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    popup.style.display = 'flex';
+                });
+                closeBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+                cancelBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

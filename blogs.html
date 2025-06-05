@@ -1,19 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tất cả bài viết - Mamcom3mien</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="./icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tất cả bài viết - Mamcom3mien</title>
+<link href="./styles.css" rel="stylesheet"/>
+<link href="./icon.png" rel="icon" type="image/png"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
         /* Thêm style riêng cho trang blogs */
+        .blog-posts a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .blog-posts a:hover {
+            text-decoration: none;
+        }
+        .blog-posts .post h3,
+        .blog-posts .post p {
+            text-decoration: none !important;
+        }
         .blog-list {
             display: flex;
             flex-direction: column;
             gap: 48px;
             margin-bottom: 60px;
+        }
+        .blog-list a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .blog-list a:hover {
+            text-decoration: none;
+            color: inherit;
         }
         .blog-row {
             display: flex;
@@ -67,9 +89,10 @@
             color: #fff;
         }
         .section-spacing {
-            padding-top: 32px;
-            padding-bottom: 32px;
+            padding-top: 23px;
+            padding-bottom: 4px;
         }
+
         @media (max-width: 900px) {
             .blog-row {
                 flex-direction: column;
@@ -109,85 +132,195 @@
                 font-size: 1.1rem;
             }
         }
+        .topic-card {
+            background: #fff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
+            min-width: 260px;
+            text-align: center;
+        }
+
+        .topic-card:hover {
+            background: #fffbf5;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            color: #d95a00;
+        }
+
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header-include"></div>
+<!-- Header -->
+<div id="header-include"></div>
 
-    <!-- Blog nổi bật -->
-    <section id="blog-featured" class="section-spacing">
-        <div class="container" style="display:flex;flex-direction:column;align-items:center;">
-            <h2>BLOG NỔI BẬT</h2>
-            <h2>___</h2>
-            <div class="blog-posts">
-                <div class="post">
-                    <img src="post1.jpg" alt="Post 1">
-                    <h3>Tiêu đề bài viết 1</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
-                <div class="post">
-                    <img src="post2.jpg" alt="Post 2">
-                    <h3>Tiêu đề bài viết 2</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
-                <div class="post">
-                    <img src="post3.jpg" alt="Post 3">
-                    <h3>Tiêu đề bài viết 3</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section-spacing" id="blog-topics" style="padding-top: 25px; padding-bottom: 0px;">
+  <div class="container" style="text-align: center;">
+    <h2 style="margin-bottom: 8px;">CHỦ ĐỀ</h2>
+    <div class="topic-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+      <a class="topic-card" href="./blogs/cat1/cat1.html">Những món ăn độc lạ/hot trend tại Việt Nam</a>
+      <a class="topic-card" href="./blogs/cat2/cat2.html">Ẩm thực miền Bắc</a>
+      <a class="topic-card" href="./blogs/cat3/cat3.html">Ẩm thực miền Trung</a>
+      <a class="topic-card" href="./blogs/cat4/cat4.html">Ẩm thực miền Nam</a>
+    </div>
+  </div>
+</section>
 
-    <main style="min-height: 70vh;">
-        <section id="blog">
-            <div class="container" style="flex-direction: column; align-items: flex-start;">
-                <h2 style="align-self: center; margin-bottom: 40px;">TẤT CẢ BÀI VIẾT</h2>
-                <div class="blog-list">
-                    <!-- Bài viết 1 -->
-                    <div class="blog-row">
-                        <div class="blog-thumb">
-                            <img src="post1.jpg" alt="Post 1">
-                        </div>
-                        <div class="blog-info">
-                            <h3>Tiêu đề bài viết 1</h3>
-                            <p>Giới thiệu ngắn gọn về bài viết 1. Đây là đoạn mô tả ngắn cho bài viết, giúp người đọc hiểu sơ lược nội dung.</p>
-                            <a href="./blogs/post1.html">Đọc tiếp &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Bài viết 2 -->
-                    <div class="blog-row">
-                        <div class="blog-thumb">
-                            <img src="post2.jpg" alt="Post 2">
-                        </div>
-                        <div class="blog-info">
-                            <h3>Tiêu đề bài viết 2</h3>
-                            <p>Giới thiệu ngắn gọn về bài viết 2. Đây là đoạn mô tả ngắn cho bài viết, giúp người đọc hiểu sơ lược nội dung.</p>
-                            <a href="./blogs/post2.html">Đọc tiếp &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Bài viết 3 -->
-                    <div class="blog-row">
-                        <div class="blog-thumb">
-                            <img src="post3.jpg" alt="Post 3">
-                        </div>
-                        <div class="blog-info">
-                            <h3>Tiêu đề bài viết 3</h3>
-                            <p>Giới thiệu ngắn gọn về bài viết 3. Đây là đoạn mô tả ngắn cho bài viết, giúp người đọc hiểu sơ lược nội dung.</p>
-                            <a href="./blogs/post3.html">Đọc tiếp &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- Thêm nhiều bài viết khác ở đây -->
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- Blog nổi bật -->
+<section class="section-spacing" id="blog-featured">
+<div class="container" style="display:flex;flex-direction:column;align-items:center;">
+<h2 style="margin-bottom: 10px;">BLOG NỔI BẬT</h2>
+<div class="blog-posts">
+<a href="./blogs/cat3/post1.html">
+<div class="post">
+<img src="./blogs/cat3/assets/01.png"/>
+<h3>Kể chuyện bằng tô mì Quảng – Lối viết ẩm thực như văn chương</h3>
+<p>Ẩm thực không chỉ là sự kết hợp của các nguyên liệu...</p>
+</div>
+</a>
+<a href="./blogs/cat1/post1.html">
+<div class="post">
+<img src="./blogs/cat1/assets/01.png"/>
+<h3>Gà Tần Đen – Món Ăn Độc Lạ Khiến Giới Trẻ Việt Mê Mẩn</h3>
+<p>Nếu bạn đang tìm kiếm một món ăn vừa lạ mắt...</p>
+</div>
+</a>
+<a href="./blogs/cat2/post2.html">
+<div class="post">
+<img src="./blogs/cat2/assets/03.png"/>
+<h3>Bánh Cuốn Thanh Trì – Tinh Hoa Mộc Mạc Giữa Lòng Hà Nội</h3>
+<p>Khi nhắc đến ẩm thực miền Bắc, người ta thường nghĩ...</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<main style="min-height: 70vh;">
 
-    <!-- Footer -->
-    <div id="footer-include"></div>
-
-    <script>
+<section id="blog">
+<div class="container" style="flex-direction: column; align-items: flex-start;">
+<h2 style="align-self: center; margin-bottom: 40px;">TẤT CẢ BÀI VIẾT</h2>
+<div class="blog-list">
+<a href="./blogs/cat2/post2.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bánh Cuốn Thanh Trì – Tinh Hoa Mộc Mạc Giữa Lòng Hà Nội" src="./blogs/cat2/assets/03.png"/>
+</div>
+<div class="blog-info">
+<h3>Bánh Cuốn Thanh Trì – Tinh Hoa Mộc Mạc Giữa Lòng Hà Nội</h3>
+<p>Khi nhắc đến ẩm thực miền Bắc, người ta thường nghĩ đến phở, bún thang, bún riêu… Nhưng với người Hà Nội gốc,bánh cuốn Thanh Trìmới là thứ q...</p>
+</div>
+</div></a>
+<a href="./blogs/cat2/post1.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bún Chả Hà Nội – Hương Vị Kinh Kỳ Trong Từng Miếng Nướng Than" src="./blogs/cat2/assets/01.png"/>
+</div>
+<div class="blog-info">
+<h3>Bún Chả Hà Nội – Hương Vị Kinh Kỳ Trong Từng Miếng Nướng Than</h3>
+<p>Nếu ai đó hỏi món ăn nào có thể đại diện cho ẩm thực đường phố Hà Nội, tôi sẽ không ngần ngại mà trả lời:bún chả. Không quá cầu kỳ như phở, ...</p>
+</div>
+</div></a>
+<a href="./blogs/cat3/post3.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Nem Nướng Nha Trang: Món Việt 'Gây Thương Nhớ' Cho Thực Khách Ngoại" src="./blogs/cat3/assets/03.png"/>
+</div>
+<div class="blog-info">
+<h3>Nem Nướng Nha Trang: Món Việt 'Gây Thương Nhớ' Cho Thực Khách Ngoại</h3>
+<p>Từ những que thịt nướng thơm phức đến trải nghiệm ẩm thực khó quên, nem nướng Nha Trang đã trở thành biểu tượng văn hóa ẩm thực Việt Nam tro...</p>
+</div>
+</div></a>
+<a href="./blogs/cat1/post3.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Tanghulu – Kẹo Trái Cây Siêu Hot Khiến Giới Trẻ Việt Phát Cuồng" src="./blogs/cat1/assets/06.png"/>
+</div>
+<div class="blog-info">
+<h3>Tanghulu – Kẹo Trái Cây Siêu Hot Khiến Giới Trẻ Việt Phát Cuồng</h3>
+<p>Nếu bạn là tín đồ ăn vặt hoặc chỉ cần lướt TikTok vài phút, hẳn bạn đã từng bắt gặp hình ảnh những xiên kẹo trái cây lấp lánh như pha lê với...</p>
+</div>
+</div></a>
+<a href="./blogs/cat4/post1.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Hủ Tiếu – Hương Vị Đậm Đà Của Miền Nam Trên Từng Sợi Nhớ Thương" src="./blogs/cat4/assets/01.png"/>
+</div>
+<div class="blog-info">
+<h3>Hủ Tiếu – Hương Vị Đậm Đà Của Miền Nam Trên Từng Sợi Nhớ Thương</h3>
+<p>Trong bản đồ ẩm thực phong phú của Việt Nam, nếu phở được xem là linh hồn của miền Bắc, bún bò là niềm tự hào của miền Trung, thì hủ tiếu ch...</p>
+</div>
+</div></a>
+<a href="./blogs/cat2/post3.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Chả Cá Lã Vọng – Dư Vị Hà Thành Trên Chảo Lửa Rực" src="./blogs/cat2/assets/05.png"/>
+</div>
+<div class="blog-info">
+<h3>Chả Cá Lã Vọng – Dư Vị Hà Thành Trên Chảo Lửa Rực</h3>
+<p>Trong bản đồ ẩm thực miền Bắc, nếu phở là món “quốc hồn quốc túy” thìchả cá Lã Vọngchính là viên ngọc quý thể hiện sự cầu kỳ và tinh tế của ...</p>
+</div>
+</div></a>
+<a href="./blogs/cat4/post3.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bánh Xèo Miền Tây – Món Ngon Vàng Ruộm Giữa Vùng Sông Nước" src="./blogs/cat4/assets/07.png"/>
+</div>
+<div class="blog-info">
+<h3>Bánh Xèo Miền Tây – Món Ngon Vàng Ruộm Giữa Vùng Sông Nước</h3>
+<p>Nếu hỏi đâu là món ăn “đặc sản tâm hồn” của người miền Tây, chắc hẳn nhiều người sẽ nhắc ngay đến bánh xèo. Món bánh đơn sơ với vỏ mỏng giòn...</p>
+</div>
+</div></a>
+<a href="./blogs/cat1/post2.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Nhộng – Món Ăn Gây Tranh Cãi Nhưng Khó Cưỡng Trong Ẩm Thực Việt" src="./blogs/cat1/assets/03.png"/>
+</div>
+<div class="blog-info">
+<h3>Nhộng – Món Ăn Gây Tranh Cãi Nhưng Khó Cưỡng Trong Ẩm Thực Việt</h3>
+<p>Ẩm thực Việt Nam không thiếu những món ăn “kén người ăn” nhưng lại khiến người từng thử qua phải gật gù tấm tắc. Một trong số đó chính là nh...</p>
+</div>
+</div></a>
+<a href="./blogs/cat3/post2.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bật mí vài bí quyết giúp nồi nước lèo bún bò Huế thơm, đậm đà như ngoài hàng" src="./blogs/cat3/assets/02.png"/>
+</div>
+<div class="blog-info">
+<h3>Bật mí vài bí quyết giúp nồi nước lèo bún bò Huế thơm, đậm đà như ngoài hàng</h3>
+<p>Sau nhiều năm thưởng thức bún bò Huế từ những quán vỉa hè đến các nhà hàng sang trọng, tôi nhận ra rằng điều làm nên sự khác biệt giữa một t...</p>
+</div>
+</div></a>
+<a href="./blogs/cat4/post2.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Bún Bò Huế Miền Nam – Hương Vị Miền Trung, Tâm Hồn Miền Nam" src="./blogs/cat4/assets/05.png"/>
+</div>
+<div class="blog-info">
+<h3>Bún Bò Huế Miền Nam – Hương Vị Miền Trung, Tâm Hồn Miền Nam</h3>
+<p>Khi nhắc đến ẩm thực miền Nam, người ta thường nghĩ đến vị ngọt thanh, béo ngậy và sự phóng khoáng trong cách nêm nếm, chế biến. Điều này th...</p>
+</div>
+</div></a>
+<a href="./blogs/cat1/post1.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Gà Tần Đen – Món Ăn Độc Lạ Khiến Giới Trẻ Việt Mê Mẩn" src="./blogs/cat1/assets/01.png"/>
+</div>
+<div class="blog-info">
+<h3>Gà Tần Đen – Món Ăn Độc Lạ Khiến Giới Trẻ Việt Mê Mẩn</h3>
+<p>Nếu bạn đang tìm kiếm một món ăn vừa lạ mắt, vừa bổ dưỡng để thử trong tuần này, thìgà tần đenchính là ứng cử viên sáng giá. Không chỉ gây s...</p>
+</div>
+</div></a>
+<a href="./blogs/cat3/post1.html"><div class="blog-row">
+<div class="blog-thumb">
+<img alt="Kể chuyện bằng tô mì Quảng – Lối viết ẩm thực như văn chương" src="./blogs/cat3/assets/01.png"/>
+</div>
+<div class="blog-info">
+<h3>Kể chuyện bằng tô mì Quảng – Lối viết ẩm thực như văn chương</h3>
+<p>Ẩm thực không chỉ là sự kết hợp của các nguyên liệu, gia vị và kỹ thuật nấu nướng. Đó còn là một câu chuyện được kể qua từng món ăn, một hàn...</p>
+</div>
+</div></a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<div id="footer-include"></div>
+<script>
         // Nhúng header và footer dạng module
         (async () => {
             document.getElementById('header-include').innerHTML = await (await fetch('header.html')).text();

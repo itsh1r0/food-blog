@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        .blog-posts a {
+            text-decoration: none;
+        }
+        .blog-posts a h3 {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -41,21 +49,27 @@
         <div class="container">
             <h2>BLOG NỔI BẬT</h2>
             <div class="blog-posts">
-                <div class="post">
-                    <img src="post1.jpg" alt="Post 1">
-                    <h3>Tiêu đề bài viết 1</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
-                <div class="post">
-                    <img src="post2.jpg" alt="Post 2">
-                    <h3>Tiêu đề bài viết 2</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
-                <div class="post">
-                    <img src="post3.jpg" alt="Post 3">
-                    <h3>Tiêu đề bài viết 3</h3>
-                    <p>Giới thiệu ngắn gọn về bài viết...</p>
-                </div>
+                <a href="./blogs/cat3/post1.html">
+                    <div class="post">
+                        <img src="./blogs/cat3/assets/01.png" alt="Kể chuyện bằng tô mì Quảng – Lối viết ẩm thực như văn chương">
+                        <h3>Kể chuyện bằng tô mì Quảng – Lối viết ẩm thực như văn chương</h3>
+                        <p>Ẩm thực không chỉ là sự kết hợp của các nguyên liệu...</p>
+                    </div>
+                </a>
+                <a href="./blogs/cat1/post1.html">
+                    <div class="post">
+                        <img src="./blogs/cat1/assets/01.png" alt="Gà Tần Đen – Món Ăn Độc Lạ Khiến Giới Trẻ Việt Mê Mẩn">
+                        <h3>Gà Tần Đen – Món Ăn Độc Lạ Khiến Giới Trẻ Việt Mê Mẩn</h3>
+                        <p>Nếu bạn đang tìm kiếm một món ăn vừa lạ mắt...</p>
+                    </div>
+                </a>
+                <a href="./blogs/cat2/post2.html">
+                    <div class="post">
+                        <img src="./blogs/cat2/assets/03.png" alt="Bánh Cuốn Thanh Trì – Tinh Hoa Mộc Mạc Giữa Lòng Hà Nội">
+                        <h3>Bánh Cuốn Thanh Trì – Tinh Hoa Mộc Mạc Giữa Lòng Hà Nội</h3>
+                        <p>Khi nhắc đến ẩm thực miền Bắc, người ta thường nghĩ...</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -65,8 +79,8 @@
         <div class="container">
             <div class="content">
                 <h2>Thông tin thêm</h2>
-                <p>Đây là phần thông tin bổ sung...</p>
-                <button>Xem chi tiết</button>
+                <p><b>Mamcom3mien</b> là blog chia sẻ công thức, trải nghiệm và văn hóa ẩm thực ba miền Việt Nam, ra đời từ niềm đam mê sâu sắc với ẩm thực truyền thống và khát vọng bảo tồn giá trị văn hóa dân tộc. Chúng tôi không chỉ đơn thuần chia sẻ công thức nấu ăn mà còn là cầu nối kết nối ba miền Bắc - Trung - Nam qua từng hương vị đặc trưng và những câu chuyện ẩm thực đầy cảm xúc.</p>
+                <button onclick="window.location.href='team.html'">Xem chi tiết</button>
             </div>
             <div class="image-carousel">
                 <div class="slide active">
